@@ -1,0 +1,90 @@
+body {
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	/*background-color: #FEFCD7;*/
+}
+
+.navbar-brand{
+	font-size: 20pt;
+}
+
+.navLinks{
+	font-size: 16pt;
+}
+
+.navbar-default{
+	background-color:#ffffff !important;
+	height:70px;
+}
+
+.navbar-brand{
+	color:#6281AD !important;
+}
+
+.reportContainer{
+	height:100px;
+	background-color:#779363;
+	width:100%;
+}
+
+.surfForm{
+	padding-top:58px;
+}
+
+.beachForm{
+	margin-left:15px;
+}
+
+.surfCheckbtn{
+	margin-left:10px;
+	background-color:#BE503B !important;
+	color: #ffffff !important;
+}
+
+.surfReport{
+	color:white;
+	display: inline;
+	margin-left:18px;
+}
+
+
+.btn{
+	background-color: #0F85E7;
+	color:#ffffff;
+}
+
+
+.banner{width: 96%; height:530px; display: block; margin: auto; overflow:hidden;}
+.featurePhoto{width:100%;}
+.contentWrapper{width:970px; margin:0 auto; margin-top: 10px}
+
+.item{margin-bottom: 7px;}
+.triImage{height:320px;width:320px;}
+.tripItem{height:320px;width:320px;}
+.centerTri{margin-left:5px;}
+.quadImage{width:238px;height:238px;}
+.quarterItem{margin-bottom:7px;}
+
+.overlay{
+	height:38px;
+	width:100%;
+	position: absolute; 
+	z-index: 999; 
+	color:white; 
+	top:75%;
+	left:10px;
+	font-family: "Tahoma" ;
+}
+
+.overlayHover{
+	height:100%;
+	width:100%;
+	position: absolute;
+	opacity:0;
+	z-index: 999;
+	background-color: black;
+}
+
+
+
+

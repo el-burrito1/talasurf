@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	div(class='container')
+		h1 Welcome back, Spencer!
+		div(class='form-group')
+			form(id='newPost')
+				label(for='postTitle') Headline
+				input(id='postTitle' name='title' class='form-control' placeholder='Headline...')
+				label(for='postDescription') Add some description 
+				input(name='postDescription' class='form-control' placeholder='description')
+				label(for='postTags') Tags 
+				input(name='postTags' class='form-control' placeholder='Enter tags')
+				label(for='feature') Video 
+				input(type='radio' id='feature' name='button' value='feature')
+				input(id='videoCode' name='videoSource' class='form-control inputField' placeholder='Add the embed code here...')
+				label(for='product') Blog post
+				input(type='radio' id='product' name='button' value='product')
+				input(id='imageCode' name='imageSource' class='form-control inputField' placeholder='Include image URL code...')
+				input(id='blogURL' name='blogURL' class='form-control inputField' placeholder='Add URL here')
+				button(class='btn' type='submit') Submit Post 
+			a(href='/' id='homeButton' class='btn returnBtn') Return Home 
+			a(href='/logout' id='homeButton' class='btn') Logout 
+		div(class='form-group')
+			form(id='newAdmin')
+				input(id='userName' name='username' class='form-control' placeholder='username')
+				input(id='email' name='email' class='form-control' placeholder='email')
+				input(id='passWord' name='password' class='form-control' placeholder='password')
+				button(class='btn' type='submit') Create User 
+

@@ -1,0 +1,15 @@
+.container{
+position: absolute;
+width: 100%;
+min-width: 1200px;
+margin-top: 50px;
+}
+
+.inputField{
+	opacity: .3;
+}
+
+.btn{
+	background-color: #0F85E7;
+	color:#ffffff;
+}

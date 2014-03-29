@@ -1,0 +1,84 @@
+extends layout
+
+block content
+    div(class='navbar navbar-default navbar-fixed-top' role='navigation')
+        a(class='navbar-brand' href='#') talasurf
+        ul(class='nav navbar-nav')
+            li
+                a(class='navLinks' href='#') home
+            li
+                a(class='navLinks' href='#') about
+    div(class='bumperContainer')
+        div(class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+            div(class='modal-dialog')
+                div(class='modal-content')
+                    div(class='modal-header')
+                        button(type='button' class='close' data-dismiss='modal' aria-hidden='true')
+                        h4(class='modal-title' id='myModalLabel') Current Beaches
+                        div(class='modal-body')
+                        div(class='modal-footer')
+                            button(type='button' class='btn btn-default' data-dismiss='modal') Close
+    div(class='row')
+        div(class='banner')
+            img(class='featurePhoto' src='http://img.wallpaperstock.net:81/surfer-wallpapers_25497_1280x720.jpg')
+    div(class='contentWrapper')
+        div(id='masonry')
+            div(class='item')
+                div(class='overlayHover')
+                div(class='overlay')
+                    h3 learn about Chiang Mai and then some
+                img(class='triImage' src='http://cdn.modernfarmer.com/wp-content/uploads/2014/01/ChiangMai12-280x173.jpg')
+            div(class='item')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://media-cache-ak0.pinimg.com/236x/6e/f1/82/6ef182a1085c987bf8143d9b2d4ea42b.jpg')
+            div(class='item')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://cdn.shopify.com/s/files/1/0257/8507/products/warren-keelan-surf-photo13sq_medium.jpg?v=1395110040') 
+            iframe(class='item' iframe src='//player.vimeo.com/video/63836620?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933' width="645" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+            div(class='item')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://blog.paleohacks.com/wp-content/uploads/2014/01/shutterstock_133653647-624x416.jpg')
+        div(id='quarterMasonry')
+            div(class='quarterItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                    h3 Test
+                img(class='quadImage' src='http://media-cdn.tripadvisor.com/media/photo-s/01/27/b1/86/la-jolla-san-diego.jpg')
+            div(class='quarterItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg') 
+            div(class='quarterItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg') 
+            div(class='quarterItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg')
+        div(id='tripMasonry')
+            div(class='tripItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://cdn.modernfarmer.com/wp-content/uploads/2014/01/ChiangMai12-280x173.jpg')
+            div(class='tripItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://media-cache-ak0.pinimg.com/236x/6e/f1/82/6ef182a1085c987bf8143d9b2d4ea42b.jpg')
+            div(class='tripItem')
+                div(class='overlayHover')
+                div(class='overlay')
+                img(class='triImage' src='http://cdn.shopify.com/s/files/1/0257/8507/products/warren-keelan-surf-photo13sq_medium.jpg?v=1395110040') 
+        
+      
+
+
+
+    
+
+
+
+
