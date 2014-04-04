@@ -1,5 +1,5 @@
 $(document).on('ready',function(){
-
+ 
   $('#surfForm').on('submit' , function(e){
   	e.preventDefault();
   	
@@ -51,14 +51,16 @@ $(document).on('ready',function(){
 	});
 
 
-$('.overlayHover').on('mouseover' , function(){
-  $(this).animate({opacity:.5},300,function(){})
-});
+$('.protectLink').on('mouseenter' , function(){
+  $(this).siblings('.overlayHover').animate({opacity:.5},300,function(){})
+  $(this).children().animate({opacity:1},300,function(){})
+})
 
-$('.overlayHover').on('mouseout' , function(){
-  $(this).animate({opacity:0},300,function(){})
-});
-
+$('.protectLink').on('mouseleave' , function(){
+  $(this).siblings('.overlayHover').animate({opacity:0},300,function(){})
+  $(this).children().first().animate({opacity:0},300,function(){})
+})
+  
 
   $('#masonry').masonry({
     columnWidth: 320,

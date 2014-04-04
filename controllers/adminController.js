@@ -12,7 +12,9 @@ var adminController = module.exports = {
 				videoSource: vimeoURL,
 				tags: allTags,
 				date: Date.now(),
-		        feature: req.body.button === 'feature',
+		        blogPost: req.body.blogPost === 'blogPost',
+		        triImage: req.body.triImage === 'triImage',
+		        quarterImage: req.body.quadImage === 'quarterImage',
 		        imageSource: req.body.imageSource,
 		        blogURL: req.body.blogURL
 			});

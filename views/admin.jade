@@ -15,9 +15,13 @@ block content
 				input(type='radio' id='feature' name='button' value='feature')
 				input(id='videoCode' name='videoSource' class='form-control inputField' placeholder='Add the embed code here...')
 				label(for='product') Blog post
-				input(type='radio' id='product' name='button' value='product')
+				input(type='radio' id='product' name='blogPost' value='blogPost')
 				input(id='imageCode' name='imageSource' class='form-control inputField' placeholder='Include image URL code...')
 				input(id='blogURL' name='blogURL' class='form-control inputField' placeholder='Add URL here')
+				label(for='triImage') Tri Image
+				input(type='radio' id='triImage' name='triImage' value='triImage') 
+				label(for='quadImage') Quarter Image
+				input(type='radio' id='quadImage' name='quadImage' value='quadImage')
 				button(class='btn' type='submit') Submit Post 
 			a(href='/' id='homeButton' class='btn returnBtn') Return Home 
 			a(href='/logout' id='homeButton' class='btn') Logout 

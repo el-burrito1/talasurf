@@ -13,17 +13,19 @@ var http = require('http');
 var path = require('path');
 var indexController = require('./controllers/indexController');
 var adminController = require('./controllers/adminController');
+var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
 
-mongoose.connect('localhost', 'test');
+mongoose.connect('localhost', 'tala');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
   console.log('Connected to DB');
 });
 
-var userData = mongoose.createConnection('mongodb://localhost/users');
-var postData = mongoose.createConnection('mongodb://localhost/posts');
+var userData = mongoose.createConnection('mongodb://localhost/tala/users');
+var postData = mongoose.createConnection('mongodb://localhost/tala/posts');
+var commentData = mongoose.createConnection('mongodb://localhost/tala/comments')
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -139,8 +141,11 @@ app.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
-app.get('/', function (req,res){
-	res.render('index');
+
+app.get('/' , indexController.mainView);
+
+app.get('/about' , function (req,res){
+  res.render('about');
 });
 
 app.post('/findBeach' , indexController.findBeach);
@@ -153,6 +158,7 @@ app.get('/logout', function (req, res){
 	  res.redirect('/');
 	});
 
+app.post('/comment' , commentController.saveComment)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

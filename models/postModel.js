@@ -1,6 +1,3 @@
-// var bcrypt = require('bcrypt');
-// var SALT_WORK_FACTOR = 10;
-
 var mongoose = require('mongoose');
 
 var postSchema = new mongoose.Schema({
@@ -9,7 +6,9 @@ var postSchema = new mongoose.Schema({
 	videoSource: String,
 	date: String,
 	tags: [String],
-	feature: Boolean,
+	blogPost: Boolean,
+	triImage: Boolean,
+	quarterImage: Boolean,
 	imageSource: String,
 	blogURL: String
 });

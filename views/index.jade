@@ -1,78 +1,110 @@
 extends layout
 
 block content
-    div(class='navbar navbar-default navbar-fixed-top' role='navigation')
+    nav(class='navbar navbar-default navbar-fixed-top' id='test' role='navigation')
         a(class='navbar-brand' href='#') talasurf
         ul(class='nav navbar-nav')
             li
-                a(class='navLinks' href='#') home
+                a(class='navLinks' href='/') home
             li
-                a(class='navLinks' href='#') about
-    div(class='bumperContainer')
-        div(class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
-            div(class='modal-dialog')
-                div(class='modal-content')
-                    div(class='modal-header')
-                        button(type='button' class='close' data-dismiss='modal' aria-hidden='true')
-                        h4(class='modal-title' id='myModalLabel') Current Beaches
-                        div(class='modal-body')
-                        div(class='modal-footer')
-                            button(type='button' class='btn btn-default' data-dismiss='modal') Close
-    div(class='row')
-        div(class='banner')
-            img(class='featurePhoto' src='http://img.wallpaperstock.net:81/surfer-wallpapers_25497_1280x720.jpg')
+                a(class='navLinks' href='/about') about
+    div(class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+        div(class='modal-dialog')
+            div(class='modal-content')
+                div(class='modal-header')
+                    button(type='button' class='close' data-dismiss='modal' aria-hidden='true')
+                    h4(class='modal-title' id='myModalLabel') Current Beaches
+                    div(class='modal-body')
+                    div(class='modal-footer')
+                        button(type='button' class='btn btn-default' data-dismiss='modal') Close
+    div(class='banner')
+        div(class='bannerText') Welcome to Talasurf
+        img(class='featurePhoto' src='http://img.wallpaperstock.net:81/surfer-wallpapers_25497_1280x720.jpg')
     div(class='contentWrapper')
         div(id='masonry')
             div(class='item')
                 div(class='overlayHover')
-                div(class='overlay')
-                    h3 learn about Chiang Mai and then some
-                img(class='triImage' src='http://cdn.modernfarmer.com/wp-content/uploads/2014/01/ChiangMai12-280x173.jpg')
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-1].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-1].description}
+                img(class='triImage' src='#{docs[docs.length-1].imageSource}')
             div(class='item')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://media-cache-ak0.pinimg.com/236x/6e/f1/82/6ef182a1085c987bf8143d9b2d4ea42b.jpg')
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-2].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-2].description}
+                img(class='triImage' src='#{docs[docs.length-2].imageSource}')
             div(class='item')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://cdn.shopify.com/s/files/1/0257/8507/products/warren-keelan-surf-photo13sq_medium.jpg?v=1395110040') 
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-3].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-3].description}
+                img(class='triImage' src='#{docs[docs.length-3].imageSource}') 
             iframe(class='item' iframe src='//player.vimeo.com/video/63836620?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933' width="645" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
             div(class='item')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://blog.paleohacks.com/wp-content/uploads/2014/01/shutterstock_133653647-624x416.jpg')
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-4].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-4].description}
+                img(class='triImage' src='#{docs[docs.length-4].imageSource}')
         div(id='quarterMasonry')
             div(class='quarterItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                    h3 Test
-                img(class='quadImage' src='http://media-cdn.tripadvisor.com/media/photo-s/01/27/b1/86/la-jolla-san-diego.jpg')
+                div(class='protectLink')
+                    a(class='readMore quarter' href='#{docs[docs.length-8].blogURL}') READ MORE
+                    div(class='overlayText')
+                        p(class='overlayText quarter') #{docs[docs.length-8].description}
+                img(class='quadImage' src='#{docs[docs.length-8].imageSource}')
             div(class='quarterItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg') 
+                div(class='protectLink')
+                    a(class='readMore quarter' href='#{docs[docs.length-9].blogURL}') READ MORE
+                    div(class='overlayText')
+                        p(class='overlayText quarter') #{docs[docs.length-9].description}
+                img(class='quadImage' src='#{docs[docs.length-9].imageSource}') 
             div(class='quarterItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg') 
+                div(class='protectLink')
+                    a(class='readMore quarter' href='#{docs[docs.length-10].blogURL}') READ MORE
+                    div(class='overlayText')
+                        p(class='overlayText quarter') #{docs[docs.length-10].description}
+                img(class='quadImage' src='#{docs[docs.length-10].imageSource}') 
             div(class='quarterItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='quadImage' src='http://www.proshred.com/sites/default/files/sandiego_0.jpg')
+                div(class='protectLink')
+                    a(class='readMore quarter' href='#{docs[docs.length-11].blogURL}') READ MORE
+                    div(class='overlayText')
+                        p(class='overlayText quarter') #{docs[docs.length-11].description}
+                img(class='quadImage' src='#{docs[docs.length-8].imageSource}')
         div(id='tripMasonry')
             div(class='tripItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://cdn.modernfarmer.com/wp-content/uploads/2014/01/ChiangMai12-280x173.jpg')
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-5].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-5].description}
+                img(class='triImage' src='#{docs[docs.length-5].imageSource}')
             div(class='tripItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://media-cache-ak0.pinimg.com/236x/6e/f1/82/6ef182a1085c987bf8143d9b2d4ea42b.jpg')
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-6].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-6].description}'
+                img(class='triImage' src='#{docs[docs.length-6].imageSource}')
             div(class='tripItem')
                 div(class='overlayHover')
-                div(class='overlay')
-                img(class='triImage' src='http://cdn.shopify.com/s/files/1/0257/8507/products/warren-keelan-surf-photo13sq_medium.jpg?v=1395110040') 
-        
+                div(class='protectLink')
+                    a(class='readMore' href='#{docs[docs.length-7].blogURL}') READ MORE
+                    div(class='overlayText')
+                        h3 #{docs[docs.length-7].description} 
+                img(class='triImage' src='#{docs[docs.length-7].imageSource}') 
+    div(class='footer') 
+        p(class='copyright')&copy; 2014 Talasurf. Made in CA.
+
       
 
 
