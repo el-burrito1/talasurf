@@ -15,41 +15,7 @@ var indexController = require('./controllers/indexController');
 var adminController = require('./controllers/adminController');
 var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
-var MONGOHQ_URL="mongodb://user:pass@server.mongohq.com:localhost/tala"
-
-var mongodb = require('mongodb')
-  , MongoClient = mongodb.MongoClient
- 
-MongoClient.connect(process.env.MONGOHQ_URL, function(err, db) {
-  // operate on the collection named "test"
-  var collection = db.collection('posts')
- 
-  // remove all records in collection (if any)
-  console.log('removing documents...')
-  collection.remove(function(err, result) {
-    if (err) {
-      return console.error(err)
-    }
-    console.log('collection cleared!')
-    // insert two documents
-    console.log('inserting new documents...')
-    collection.insert([{name: 'tester'}, {name: 'coder'}], function(err,
-docs) {
-      if (err) {
-        return console.error(err)
-      }
-      console.log('just inserted ', docs.length, ' new documents!')
-      collection.find({}).toArray(function(err, docs) {
-        if (err) {
-          return console.error(err)
-        }
-        docs.forEach(function(doc) {
-          console.log('found document: ', doc)
-        })
-      })
-    })
-  })
-})
+export MONGOHQ_URL=mongodb://<user>:<password>@oceanic.mongohq.com:10024/app23723905
 
 if(global.process.env.MONGOHQ_URL){
   mongoose.connect(global.process.env.MONGOHQ_URL);
