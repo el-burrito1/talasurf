@@ -16,6 +16,8 @@ var adminController = require('./controllers/adminController');
 var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
 
+export MONGOHQ_URL="mongodb://user:pass@server.mongohq.com:localhost/tala"
+
 if(global.process.env.MONGOHQ_URL){
   mongoose.connect(global.process.env.MONGOHQ_URL)
 }else{
