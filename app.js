@@ -16,7 +16,13 @@ var adminController = require('./controllers/adminController');
 var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
 
-mongoose.connect('localhost', 'tala');
+if(global.process.env.MONGOHQ_URL){
+  mongoose.connect(global.process.env.MONGOHQ_URL)
+}else{
+  mongoose.connect('mongodb://localhost/tala');
+}
+
+// mongoose.connect('localhost', 'tala');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
