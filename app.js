@@ -29,9 +29,9 @@ db.once('open', function callback() {
   console.log('Connected to DB');
 });
 
-var userData = mongoose.createConnection('mongodb://localhost/tala/users');
-var postData = mongoose.createConnection('mongodb://localhost/tala/posts');
-var commentData = mongoose.createConnection('mongodb://localhost/tala/comments')
+// var userData = mongoose.createConnection('mongodb://localhost/tala/users');
+// var postData = mongoose.createConnection('mongodb://localhost/tala/posts');
+// var commentData = mongoose.createConnection('mongodb://localhost/tala/comments');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
