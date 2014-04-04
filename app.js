@@ -17,7 +17,7 @@ var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
 
 if(global.process.env.MONGOHQ_URL){
-  mongoose.connect(global.process.env.MONGOHQ_URL)
+  mongoose.connect(global.process.env.MONGOHQ_URL);
 }else{
   mongoose.connect('mongodb://localhost/tala');
 }
