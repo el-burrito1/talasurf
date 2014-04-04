@@ -15,7 +15,6 @@ var indexController = require('./controllers/indexController');
 var adminController = require('./controllers/adminController');
 var commentController = require('./controllers/commentController');
 var mongoose = require('mongoose');
-export MONGOHQ_URL=mongodb://<user>:<password>@oceanic.mongohq.com:10024/app23723905
 
 if(global.process.env.MONGOHQ_URL){
   mongoose.connect(global.process.env.MONGOHQ_URL);
