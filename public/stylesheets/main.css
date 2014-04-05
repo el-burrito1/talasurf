@@ -71,7 +71,7 @@ body {
 	color:white;
 	font-size: 24pt;
 	z-index: 999;
-	top:63%;
+	top:470px;
 	left:5%;
 }
 
@@ -89,11 +89,11 @@ body {
 
 .overlayText{
 	height:38px;
-	width:100%;
+	width:96%;
 	position: absolute; 
 	z-index: 999; 
 	color:white; 
-	top:75%;
+	top:68%;
 	left:10px;
 	font-family: "Tahoma" ;
 }
